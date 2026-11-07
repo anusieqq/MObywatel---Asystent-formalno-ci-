@@ -20,18 +20,15 @@ dane i pismo demonstracyjne są fikcyjne.
 Adres lokalny do testów: http://127.0.0.1:8790/aplikacja
 
 Adres lokalny działa wyłącznie na komputerze, na którym uruchomiono serwer.
-Przed wysłaniem zgłoszenia wstaw tutaj publiczny adres HTTPS uzyskany po
-wdrożeniu aplikacji:
-
-Link do prototypu: [WSTAW PUBLICZNY ADRES HTTPS]
+Publiczny prototyp konkursowy (HTTPS, bez logowania):
+https://mobywatel-asystent-formalnosci.onrender.com/aplikacja
 
 Projekt zawiera plik render.yaml przygotowujący wdrożenie kontenerowe na
-Render. Po umieszczeniu projektu w repozytorium Git można utworzyć usługę
-Web Service z repozytorium; Render odczyta konfigurację z render.yaml.
-Wariant konkursowy nie wymaga logowania i nie ma skonfigurowanego klucza AI,
-dzięki czemu można przejść przykładowe scenariusze demonstracyjne bez
-udostępniania klucza API. Publiczny serwer demonstracyjny nie powinien
-otrzymywać prawdziwych pism ani danych osobowych.
+Render. Wersja demonstracyjna jest już wdrożona z tego repozytorium.
+Nie wymaga logowania i nie ma skonfigurowanego klucza AI, dzięki czemu można
+przejść przykładowe scenariusze bez udostępniania klucza API. Publiczny
+serwer demonstracyjny nie powinien otrzymywać prawdziwych pism ani danych
+osobowych.
 
 
 3. DODATKOWY LINK — POLSKIE MODELE I TECHNOLOGIE
