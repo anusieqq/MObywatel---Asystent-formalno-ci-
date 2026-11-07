@@ -1,0 +1,97 @@
+{
+  "forma": "ti (tikanje, npr. 'Potrdi svoje podatke')",
+  "nazwy": {
+    "ZUS": "poljski zavod za socialno zavarovanje",
+    "eZUS / PUE ZUS": "spletni račun zavoda za zavarovanje",
+    "NFZ": "državni zdravstveni sklad",
+    "IKP (Internetowe Konto Pacjenta)": "spletni račun pacienta",
+    "UFG": "garancijski sklad zavarovanj vozil",
+    "CEPiK": "register vozil in voznikov",
+    "CEIDG": "register samostojnih podjetnikov",
+    "KRS": "sodni register podjetij",
+    "ePUAP": "državna platforma spletnih obrazcev",
+    "e-Doręczenia": "uradna elektronska priporočena pošta",
+    "Profil Zaufany": "brezplačna državna spletna identiteta",
+    "podpis zaufany": "brezplačen državni elektronski podpis",
+    "Twój e-PIT": "vnaprej izpolnjena spletna dohodninska napoved",
+    "e-Urząd Skarbowy": "spletni davčni urad",
+    "mObywatel": "",
+    "mDowód": "digitalna osebna izkaznica v mObywatel",
+    "mStłuczka": "digitalno poročilo o nesreči",
+    "Bezpiecznie w sieci": "storitev za varnost na spletu",
+    "wGotowości": "prostovoljno obrambno usposabljanje",
+    "CERT Polska": "državna ekipa za kibernetske incidente",
+    "System Dokumenty Zastrzeżone (ZBP)": "bančni register blokiranih dokumentov",
+    "Zastrzegam.pl": "storitev bank za blokiranje kartic",
+    "MSZ": "ministrstvo za zunanje zadeve",
+    "MON": "ministrstvo za obrambo",
+    "RCB": "vladni center za varnost",
+    "UKE": "regulator elektronskih komunikacij",
+    "PKW": "državna volilna komisija",
+    "IMGW": "državna meteorološka služba",
+    "GIOŚ": "glavni inšpektorat za okolje",
+    "PZU / Warta / Allianz / PKP / Poczta Polska / BLIK / gov.pl": "",
+    "ZUS ZCNA, EMP, PIT-37, PCC-3, NIP, REGON, PKD, VIN": "imena obrazcev in kod"
+  },
+  "terminy": {
+    "PESEL": "identifikacijska številka",
+    "dowód osobisty": "osebna izkaznica",
+    "e-dowód": "e-osebna izkaznica",
+    "prawo jazdy": "vozniško dovoljenje",
+    "wtórnik prawa jazdy": "dvojnik vozniškega dovoljenja",
+    "paszport": "potni list",
+    "Karta Dużej Rodziny (KDR)": "kartica za velike družine",
+    "800+": "otroški dodatek 800+",
+    "OC": "obvezno zavarovanje",
+    "Urząd Skarbowy": "davčni urad",
+    "urząd gminy / urząd miasta": "občina / mestna občina",
+    "starostwo / starosta": "okrajni urad / vodja okrajnega urada",
+    "wydział komunikacji": "oddelek za registracijo vozil",
+    "urząd stanu cywilnego (USC)": "matični urad",
+    "urząd wojewódzki": "pokrajinski urad",
+    "księga wieczysta (KW)": "zemljiškoknjižni vložek (KW)",
+    "punkty karne": "kazenske točke",
+    "mandat": "globa",
+    "znak (mObywatela)": "znak",
+    "Potwierdź swoje dane": "Potrdi svoje podatke",
+    "wizyta na odciski palców": "obisk za odvzem prstnih odtisov"
+  },
+  "trzy": {
+    "zastrzec dokument w bankach": {
+      "bezokolicznik": "blokirati dokument v bankah",
+      "przycisk": "Blokiraj v bankah",
+      "rzeczownik": "blokada dokumenta v bankah",
+      "stan": "dokument blokiran v bankah",
+      "rdzen": [
+        "blok"
+      ]
+    },
+    "zablokować dowód (blokada)": {
+      "bezokolicznik": "začasno onemogočiti osebno izkaznico",
+      "przycisk": "Onemogoči osebno izkaznico",
+      "rzeczownik": "začasna onemogočitev osebne izkaznice",
+      "stan": "osebna izkaznica onemogočena",
+      "rdzen": [
+        "onemog"
+      ]
+    },
+    "unieważnić (unieważnienie)": {
+      "bezokolicznik": "razveljaviti osebno izkaznico",
+      "przycisk": "Razveljavi osebno izkaznico",
+      "rzeczownik": "razveljavitev osebne izkaznice",
+      "stan": "osebna izkaznica razveljavljena",
+      "rdzen": [
+        "razvelj"
+      ]
+    },
+    "zastrzec PESEL": {
+      "bezokolicznik": "blokirati identifikacijsko številko",
+      "przycisk": "Blokiraj identifikacijsko številko",
+      "rzeczownik": "blokada identifikacijske številke",
+      "stan": "identifikacijska številka blokirana",
+      "rdzen": [
+        "blok"
+      ]
+    }
+  }
+}

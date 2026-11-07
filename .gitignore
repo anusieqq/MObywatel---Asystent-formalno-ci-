@@ -1,0 +1,6 @@
+.env
+agent.log
+**/agent.log
+__pycache__/
+**/__pycache__/
+*.py[cod]

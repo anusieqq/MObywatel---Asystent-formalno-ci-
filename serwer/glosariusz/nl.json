@@ -1,0 +1,98 @@
+{
+ "forma": "je",
+ "nazwy": {
+  "ZUS": "sociale verzekeringsinstantie",
+  "eZUS / PUE ZUS": "online ZUS-account",
+  "NFZ": "nationaal zorgfonds",
+  "IKP (Internetowe Konto Pacjenta)": "online patiëntenaccount",
+  "UFG": "garantiefonds voor autoverzekering",
+  "CEPiK": "voertuig- en rijbewijsregister",
+  "CEIDG": "register van eenmanszaken",
+  "KRS": "bedrijvenregister van de rechtbank",
+  "ePUAP": "online formulierenplatform van de overheid",
+  "e-Doręczenia": "officiële elektronische aangetekende post",
+  "Profil Zaufany": "gratis digitale overheidsidentiteit",
+  "podpis zaufany": "gratis digitale overheidshandtekening",
+  "Twój e-PIT": "vooraf ingevulde online belastingaangifte",
+  "e-Urząd Skarbowy": "online belastingkantoor",
+  "mObywatel": "",
+  "mDowód": "digitale ID-kaart in mObywatel",
+  "mStłuczka": "digitaal aanrijdingsformulier",
+  "Bezpiecznie w sieci": "dienst voor online veiligheid",
+  "wGotowości": "vrijwillige defensietraining",
+  "CERT Polska": "nationaal cyberincidententeam",
+  "System Dokumenty Zastrzeżone (ZBP)": "waarschuwingsregister voor documenten",
+  "Zastrzegam.pl": "kaartblokkeringsdienst van banken",
+  "MSZ": "ministerie van Buitenlandse Zaken",
+  "MON": "ministerie van Defensie",
+  "RCB": "regeringscentrum voor veiligheid",
+  "UKE": "toezichthouder telecommunicatie",
+  "PKW": "nationale kiescommissie",
+  "IMGW": "nationale weerdienst",
+  "GIOŚ": "inspectie voor milieubescherming",
+  "PZU / Warta / Allianz / PKP / Poczta Polska / BLIK / gov.pl": "",
+  "ZUS ZCNA, EMP, PIT-37, PCC-3, NIP, REGON, PKD, VIN": "formulier- en codenamen, niet vertaald"
+ },
+ "terminy": {
+  "PESEL": "identificatienummer",
+  "dowód osobisty": "ID-kaart",
+  "e-dowód": "e-ID-kaart",
+  "prawo jazdy": "rijbewijs",
+  "wtórnik prawa jazdy": "duplicaat rijbewijs",
+  "paszport": "paspoort",
+  "Karta Dużej Rodziny (KDR)": "Grote Gezinnenkaart",
+  "800+": "800+ kindertoeslag",
+  "OC": "WA-verzekering",
+  "Urząd Skarbowy": "belastingkantoor",
+  "urząd gminy / urząd miasta": "gemeentehuis",
+  "starostwo / starosta": "districtskantoor / districtshoofd",
+  "wydział komunikacji": "afdeling voertuigregistratie",
+  "urząd stanu cywilnego (USC)": "burgerlijke stand",
+  "urząd wojewódzki": "provinciekantoor",
+  "księga wieczysta (KW)": "kadaster",
+  "punkty karne": "strafpunten",
+  "mandat": "boete",
+  "znak (mObywatela)": "code",
+  "Potwierdź swoje dane": "Bevestig je gegevens",
+  "wizyta na odciski palców": "afspraak voor vingerafdrukken"
+ },
+ "trzy": {
+  "zastrzec dokument w bankach": {
+   "przycisk": "Blokkeren bij banken",
+   "bezokolicznik": "het document bij banken blokkeren",
+   "rzeczownik": "blokkering bij banken",
+   "stan": "geblokkeerd bij banken",
+   "rdzen": [
+    "blok",
+    "bank"
+   ]
+  },
+  "zablokować dowód (blokada)": {
+   "przycisk": "ID-kaart opschorten",
+   "bezokolicznik": "de ID-kaart tijdelijk opschorten",
+   "rzeczownik": "opschorting van de ID-kaart",
+   "stan": "ID-kaart opgeschort",
+   "rdzen": [
+    "schort"
+   ]
+  },
+  "unieważnić (unieważnienie)": {
+   "bezokolicznik": "de ID-kaart ongeldig verklaren",
+   "przycisk": "Ongeldig verklaren",
+   "rzeczownik": "ongeldigverklaring van de ID-kaart",
+   "stan": "ID-kaart ongeldig verklaard",
+   "rdzen": [
+    "ongeldig"
+   ]
+  },
+  "zastrzec PESEL": {
+   "przycisk": "ID-nummer blokkeren",
+   "bezokolicznik": "het ID-nummer blokkeren",
+   "rzeczownik": "blokkering van het ID-nummer",
+   "stan": "ID-nummer geblokkeerd",
+   "rdzen": [
+    "blok"
+   ]
+  }
+ }
+}

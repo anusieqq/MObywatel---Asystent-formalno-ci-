@@ -1,0 +1,99 @@
+{
+ "forma": "tu",
+ "nazwy": {
+  "ZUS": "asigurări sociale poloneze",
+  "eZUS / PUE ZUS": "portalul online al Asigurărilor Sociale",
+  "NFZ": "fondul național de sănătate",
+  "IKP (Internetowe Konto Pacjenta)": "cont de pacient online",
+  "UFG": "fondul de garantare a asigurărilor",
+  "CEPiK": "registrul vehiculelor și șoferilor",
+  "CEIDG": "registrul întreprinzătorilor individuali",
+  "KRS": "registrul judiciar al societăților",
+  "ePUAP": "platformă administrativă online",
+  "e-Doręczenia": "scrisoare recomandată electronică oficială",
+  "Profil Zaufany": "identitate digitală gratuită a statului",
+  "podpis zaufany": "semnătură electronică gratuită a statului",
+  "Twój e-PIT": "declarație fiscală precompletată online",
+  "e-Urząd Skarbowy": "administrație fiscală online",
+  "mObywatel": "",
+  "mDowód": "carte de identitate digitală",
+  "mStłuczka": "constatare amiabilă digitală",
+  "Bezpiecznie w sieci": "serviciu de siguranță online",
+  "wGotowości": "instruire voluntară de apărare",
+  "CERT Polska": "echipa națională de securitate cibernetică",
+  "System Dokumenty Zastrzeżone (ZBP)": "registrul bancar al documentelor blocate",
+  "Zastrzegam.pl": "serviciu de blocare a cardurilor bancare",
+  "MSZ": "ministerul Afacerilor Externe",
+  "MON": "ministerul Apărării Naționale",
+  "RCB": "centrul guvernamental de securitate",
+  "UKE": "autoritatea de comunicații electronice",
+  "PKW": "comisia electorală națională",
+  "IMGW": "serviciul meteorologic național",
+  "GIOŚ": "inspectoratul de mediu",
+  "PZU / Warta / Allianz / PKP / Poczta Polska / BLIK / gov.pl": "",
+  "ZUS ZCNA, EMP, PIT-37, PCC-3, NIP, REGON, PKD, VIN": "nume de formulare și coduri, netraduse"
+ },
+ "terminy": {
+  "PESEL": "număr de identificare",
+  "dowód osobisty": "carte de identitate",
+  "e-dowód": "carte electronică de identitate",
+  "prawo jazdy": "permis de conducere",
+  "wtórnik prawa jazdy": "duplicat al permisului de conducere",
+  "paszport": "pașaport",
+  "Karta Dużej Rodziny (KDR)": "Cardul Familiei Numeroase",
+  "800+": "alocația 800+",
+  "OC": "RCA",
+  "Urząd Skarbowy": "administrația fiscală",
+  "urząd gminy / urząd miasta": "primărie",
+  "starostwo / starosta": "administrația districtului / conducătorul districtului",
+  "wydział komunikacji": "serviciul de permise și înmatriculări",
+  "urząd stanu cywilnego (USC)": "oficiul de stare civilă",
+  "urząd wojewódzki": "oficiul voievodal",
+  "księga wieczysta (KW)": "cartea funciară",
+  "punkty karne": "puncte de penalizare",
+  "mandat": "amendă",
+  "znak (mObywatela)": "cod mObywatel",
+  "Potwierdź swoje dane": "Confirmă-ți datele",
+  "wizyta na odciski palców": "vizită pentru amprente digitale"
+ },
+ "trzy": {
+  "zastrzec dokument w bankach": {
+   "bezokolicznik": "A bloca documentul la bănci",
+   "przycisk": "Blochează la bănci",
+   "rzeczownik": "Blocarea documentului la bănci",
+   "stan": "Blocat la bănci",
+   "rdzen": [
+    "bloc",
+    "bănci"
+   ]
+  },
+  "zablokować dowód (blokada)": {
+   "bezokolicznik": "A suspenda cartea de identitate",
+   "przycisk": "Suspendă buletinul",
+   "rzeczownik": "Suspendarea cărții de identitate",
+   "stan": "Carte suspendată 14 zile",
+   "rdzen": [
+    "suspend"
+   ]
+  },
+  "unieważnić (unieważnienie)": {
+   "bezokolicznik": "A anula cartea de identitate",
+   "przycisk": "Anulează buletinul",
+   "rzeczownik": "Anularea cărții de identitate",
+   "stan": "Carte anulată definitiv",
+   "rdzen": [
+    "anul"
+   ]
+  },
+  "zastrzec PESEL": {
+   "bezokolicznik": "A bloca numărul de identificare",
+   "przycisk": "Blochează numărul",
+   "rzeczownik": "Blocarea numărului de identificare",
+   "stan": "Număr de identificare blocat",
+   "rdzen": [
+    "bloc",
+    "număr"
+   ]
+  }
+ }
+}

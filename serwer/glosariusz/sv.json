@@ -1,0 +1,98 @@
+{
+ "forma": "du",
+ "nazwy": {
+  "ZUS": "statliga socialförsäkringen",
+  "eZUS / PUE ZUS": "onlinekonto hos ZUS",
+  "NFZ": "nationella sjukvårdsfonden",
+  "IKP (Internetowe Konto Pacjenta)": "patientkonto på nätet",
+  "UFG": "garantifond för trafikförsäkring",
+  "CEPiK": "fordons- och förarregister",
+  "CEIDG": "register för enskilda firmor",
+  "KRS": "nationellt företagsregister",
+  "ePUAP": "myndigheternas e-tjänsteplattform",
+  "e-Doręczenia": "officiell elektronisk rekommenderad post",
+  "Profil Zaufany": "gratis statlig e-legitimation",
+  "podpis zaufany": "gratis statlig e-underskrift",
+  "Twój e-PIT": "förifylld deklaration på nätet",
+  "e-Urząd Skarbowy": "skattekontor på nätet",
+  "mObywatel": "",
+  "mDowód": "digitalt id-kort i mObywatel",
+  "mStłuczka": "digital olycksrapport",
+  "Bezpiecznie w sieci": "tjänst för säkerhet på nätet",
+  "wGotowości": "frivillig försvarsutbildning",
+  "CERT Polska": "nationellt it-incidentteam",
+  "System Dokumenty Zastrzeżone (ZBP)": "bankernas varningsregister för dokument",
+  "Zastrzegam.pl": "bankernas tjänst för kortspärr",
+  "MSZ": "utrikesministeriet",
+  "MON": "försvarsministeriet",
+  "RCB": "regeringens säkerhetscentrum",
+  "UKE": "tillsynsmyndighet för telekom",
+  "PKW": "nationella valkommissionen",
+  "IMGW": "nationella vädertjänsten",
+  "GIOŚ": "miljöskyddsinspektionen",
+  "PZU / Warta / Allianz / PKP / Poczta Polska / BLIK / gov.pl": "",
+  "ZUS ZCNA, EMP, PIT-37, PCC-3, NIP, REGON, PKD, VIN": "namn på blanketter och koder, oöversatta"
+ },
+ "terminy": {
+  "PESEL": "id-nummer",
+  "dowód osobisty": "id-kort",
+  "e-dowód": "e-id-kort",
+  "prawo jazdy": "körkort",
+  "wtórnik prawa jazdy": "duplikat av körkort",
+  "paszport": "pass",
+  "Karta Dużej Rodziny (KDR)": "Flerbarnskort",
+  "800+": "800+ barnbidrag",
+  "OC": "trafikförsäkring",
+  "Urząd Skarbowy": "skattekontoret",
+  "urząd gminy / urząd miasta": "kommunkontoret",
+  "starostwo / starosta": "distriktskontoret / distriktschefen",
+  "wydział komunikacji": "fordonsregistreringskontoret",
+  "urząd stanu cywilnego (USC)": "civilregistret",
+  "urząd wojewódzki": "länsstyrelsen",
+  "księga wieczysta (KW)": "fastighetsregistret",
+  "punkty karne": "straffpoäng",
+  "mandat": "böter",
+  "znak (mObywatela)": "kod",
+  "Potwierdź swoje dane": "Bekräfta dina uppgifter",
+  "wizyta na odciski palców": "besök för fingeravtryck"
+ },
+ "trzy": {
+  "zastrzec dokument w bankach": {
+   "przycisk": "Spärra hos banker",
+   "bezokolicznik": "spärra dokumentet hos bankerna",
+   "rzeczownik": "spärr hos banker",
+   "stan": "spärrat hos banker",
+   "rdzen": [
+    "spärr",
+    "bank"
+   ]
+  },
+  "zablokować dowód (blokada)": {
+   "przycisk": "Inaktivera id-kort",
+   "bezokolicznik": "tillfälligt inaktivera id-kortet",
+   "rzeczownik": "inaktivering av id-kortet",
+   "stan": "id-kortet är inaktiverat",
+   "rdzen": [
+    "inaktiv"
+   ]
+  },
+  "unieważnić (unieważnienie)": {
+   "bezokolicznik": "ogiltigförklara id-kortet",
+   "przycisk": "Ogiltigförklara id-kort",
+   "rzeczownik": "ogiltigförklaring av id-kortet",
+   "stan": "id-kortet är ogiltigförklarat",
+   "rdzen": [
+    "ogiltigförklar"
+   ]
+  },
+  "zastrzec PESEL": {
+   "przycisk": "Spärra id-numret",
+   "bezokolicznik": "spärra id-numret",
+   "rzeczownik": "spärr av id-numret",
+   "stan": "id-numret är spärrat",
+   "rdzen": [
+    "spärr"
+   ]
+  }
+ }
+}

@@ -1,0 +1,98 @@
+{
+ "forma": "du",
+ "nazwy": {
+  "ZUS": "staatliche Sozialversicherung",
+  "eZUS / PUE ZUS": "Online-Konto bei der ZUS",
+  "NFZ": "staatliche Krankenversicherungskasse",
+  "IKP (Internetowe Konto Pacjenta)": "Online-Patientenkonto",
+  "UFG": "Garantiefonds für Kfz-Haftpflicht",
+  "CEPiK": "Fahrzeug- und Fahrerregister",
+  "CEIDG": "Register für Einzelunternehmer",
+  "KRS": "Unternehmensregister der Gerichte",
+  "ePUAP": "Online-Formularplattform der Behörden",
+  "e-Doręczenia": "elektronisches amtliches Einschreiben",
+  "Profil Zaufany": "kostenlose staatliche Online-Identität",
+  "podpis zaufany": "kostenlose staatliche E-Signatur",
+  "Twój e-PIT": "vorausgefüllte Online-Steuererklärung",
+  "e-Urząd Skarbowy": "Online-Finanzamt",
+  "mObywatel": "",
+  "mDowód": "digitaler Ausweis in mObywatel",
+  "mStłuczka": "digitale Unfallmeldung",
+  "Bezpiecznie w sieci": "Online-Sicherheitsdienst",
+  "wGotowości": "freiwillige Verteidigungsausbildung",
+  "CERT Polska": "nationales Cybersicherheitsteam",
+  "System Dokumenty Zastrzeżone (ZBP)": "Dokumentenwarnregister der Banken",
+  "Zastrzegam.pl": "Kartensperrdienst der Banken",
+  "MSZ": "Außenministerium",
+  "MON": "Verteidigungsministerium",
+  "RCB": "Regierungszentrum für Sicherheit",
+  "UKE": "Telekommunikationsregulierer",
+  "PKW": "Nationale Wahlkommission",
+  "IMGW": "Nationaler Wetterdienst",
+  "GIOŚ": "Umweltschutzinspektion",
+  "PZU / Warta / Allianz / PKP / Poczta Polska / BLIK / gov.pl": "",
+  "ZUS ZCNA, EMP, PIT-37, PCC-3, NIP, REGON, PKD, VIN": "Formular- und Codenamen, nicht übersetzt"
+ },
+ "terminy": {
+  "PESEL": "ID-Nummer",
+  "dowód osobisty": "Personalausweis",
+  "e-dowód": "e-Ausweis",
+  "prawo jazdy": "Führerschein",
+  "wtórnik prawa jazdy": "Ersatzführerschein",
+  "paszport": "Reisepass",
+  "Karta Dużej Rodziny (KDR)": "Großfamilienkarte",
+  "800+": "800+ Kindergeld",
+  "OC": "Kfz-Haftpflicht",
+  "Urząd Skarbowy": "Finanzamt",
+  "urząd gminy / urząd miasta": "Gemeindeamt",
+  "starostwo / starosta": "Landratsamt / Landrat",
+  "wydział komunikacji": "Straßenverkehrsamt",
+  "urząd stanu cywilnego (USC)": "Standesamt",
+  "urząd wojewódzki": "Woiwodschaftsamt",
+  "księga wieczysta (KW)": "Grundbuch",
+  "punkty karne": "Strafpunkte",
+  "mandat": "Bußgeld",
+  "znak (mObywatela)": "Code",
+  "Potwierdź swoje dane": "Bestätige deine Daten",
+  "wizyta na odciski palców": "Termin zur Fingerabdruckabnahme"
+ },
+ "trzy": {
+  "zastrzec dokument w bankach": {
+   "przycisk": "Bei Banken sperren",
+   "bezokolicznik": "das Dokument bei Banken sperren",
+   "rzeczownik": "Sperre bei Banken",
+   "stan": "bei Banken gesperrt",
+   "rdzen": [
+    "sperr",
+    "bank"
+   ]
+  },
+  "zablokować dowód (blokada)": {
+   "przycisk": "Ausweis deaktivieren",
+   "bezokolicznik": "den Ausweis vorübergehend deaktivieren",
+   "rzeczownik": "Deaktivierung des Ausweises",
+   "stan": "Ausweis deaktiviert",
+   "rdzen": [
+    "deaktiv"
+   ]
+  },
+  "unieważnić (unieważnienie)": {
+   "bezokolicznik": "den Ausweis für ungültig erklären",
+   "przycisk": "Für ungültig erklären",
+   "rzeczownik": "Ungültigerklärung des Ausweises",
+   "stan": "Ausweis für ungültig erklärt",
+   "rdzen": [
+    "ungültig"
+   ]
+  },
+  "zastrzec PESEL": {
+   "przycisk": "ID-Nummer sperren",
+   "bezokolicznik": "die ID-Nummer sperren",
+   "rzeczownik": "Sperrung der ID-Nummer",
+   "stan": "ID-Nummer gesperrt",
+   "rdzen": [
+    "sperr"
+   ]
+  }
+ }
+}

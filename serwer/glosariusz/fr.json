@@ -1,0 +1,99 @@
+{
+  "forma": "tu",
+  "nazwy": {
+    "ZUS": "caisse polonaise de sécurité sociale",
+    "eZUS / PUE ZUS": "espace en ligne de la sécurité sociale",
+    "NFZ": "caisse nationale d’assurance maladie",
+    "IKP (Internetowe Konto Pacjenta)": "compte patient en ligne",
+    "UFG": "fonds de garantie des assurances",
+    "CEPiK": "registre des véhicules et conducteurs",
+    "CEIDG": "registre des entrepreneurs individuels",
+    "KRS": "registre judiciaire des sociétés",
+    "ePUAP": "plateforme administrative en ligne",
+    "e-Doręczenia": "recommandé électronique officiel",
+    "Profil Zaufany": "identité numérique gratuite de l’État",
+    "podpis zaufany": "signature électronique gratuite de l’État",
+    "Twój e-PIT": "déclaration d’impôt préremplie en ligne",
+    "e-Urząd Skarbowy": "centre des impôts en ligne",
+    "mObywatel": "",
+    "mDowód": "carte d’identité numérique",
+    "mStłuczka": "constat d’accident numérique",
+    "Bezpiecznie w sieci": "service de sécurité en ligne",
+    "wGotowości": "formation volontaire à la défense",
+    "CERT Polska": "équipe nationale de cybersécurité",
+    "System Dokumenty Zastrzeżone (ZBP)": "registre bancaire des documents bloqués",
+    "Zastrzegam.pl": "service de blocage des cartes bancaires",
+    "MSZ": "ministère des Affaires étrangères",
+    "MON": "ministère de la Défense nationale",
+    "RCB": "centre gouvernemental de sécurité",
+    "UKE": "régulateur des télécommunications",
+    "PKW": "commission électorale nationale",
+    "IMGW": "service météorologique national",
+    "GIOŚ": "inspection de l’environnement",
+    "PZU / Warta / Allianz / PKP / Poczta Polska / BLIK / gov.pl": "",
+    "ZUS ZCNA, EMP, PIT-37, PCC-3, NIP, REGON, PKD, VIN": "noms de formulaires et codes, non traduits"
+  },
+  "terminy": {
+    "PESEL": "numéro d’identification",
+    "dowód osobisty": "carte d’identité",
+    "e-dowód": "carte d’identité électronique",
+    "prawo jazdy": "permis de conduire",
+    "wtórnik prawa jazdy": "duplicata du permis de conduire",
+    "paszport": "passeport",
+    "Karta Dużej Rodziny (KDR)": "Carte Famille nombreuse",
+    "800+": "allocation familiale 800+",
+    "OC": "assurance auto",
+    "Urząd Skarbowy": "centre des impôts",
+    "urząd gminy / urząd miasta": "mairie",
+    "starostwo / starosta": "administration du district / chef du district",
+    "wydział komunikacji": "service des immatriculations",
+    "urząd stanu cywilnego (USC)": "service de l’état civil",
+    "urząd wojewódzki": "préfecture de voïvodie",
+    "księga wieczysta (KW)": "livre foncier",
+    "punkty karne": "points de pénalité",
+    "mandat": "amende",
+    "znak (mObywatela)": "code mObywatel",
+    "Potwierdź swoje dane": "Confirme tes données",
+    "wizyta na odciski palców": "visite pour les empreintes digitales"
+  },
+  "trzy": {
+    "zastrzec dokument w bankach": {
+      "bezokolicznik": "Bloquer le document auprès des banques",
+      "przycisk": "Bloquer en banque",
+      "rzeczownik": "Blocage du document auprès des banques",
+      "stan": "Bloqué auprès des banques",
+      "rdzen": [
+        "blo",
+        "banque"
+      ]
+    },
+    "zablokować dowód (blokada)": {
+      "bezokolicznik": "Suspendre la carte d’identité",
+      "przycisk": "Suspendre la carte",
+      "rzeczownik": "Suspension de la carte d’identité",
+      "stan": "Carte d’identité suspendue 14 jours",
+      "rdzen": [
+        "suspen"
+      ]
+    },
+    "unieważnić (unieważnienie)": {
+      "bezokolicznik": "Annuler la carte d’identité",
+      "przycisk": "Annuler la carte",
+      "rzeczownik": "Annulation de la carte d’identité",
+      "stan": "Carte d’identité annulée définitivement",
+      "rdzen": [
+        "annul"
+      ]
+    },
+    "zastrzec PESEL": {
+      "bezokolicznik": "Bloquer le numéro d’identification",
+      "przycisk": "Bloquer le numéro",
+      "rzeczownik": "Blocage du numéro d’identification",
+      "stan": "Numéro d’identification bloqué",
+      "rdzen": [
+        "blo",
+        "numéro"
+      ]
+    }
+  }
+}

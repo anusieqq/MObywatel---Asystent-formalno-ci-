@@ -1,0 +1,99 @@
+{
+  "forma": "tu",
+  "nazwy": {
+    "ZUS": "previdenza sociale polacca",
+    "eZUS / PUE ZUS": "portale online della Previdenza sociale",
+    "NFZ": "fondo sanitario nazionale",
+    "IKP (Internetowe Konto Pacjenta)": "account paziente online",
+    "UFG": "fondo di garanzia assicurativo",
+    "CEPiK": "registro veicoli e conducenti",
+    "CEIDG": "registro delle imprese individuali",
+    "KRS": "registro giudiziario delle società",
+    "ePUAP": "piattaforma amministrativa online",
+    "e-Doręczenia": "raccomandata elettronica ufficiale",
+    "Profil Zaufany": "identità digitale gratuita dello Stato",
+    "podpis zaufany": "firma elettronica gratuita dello Stato",
+    "Twój e-PIT": "dichiarazione dei redditi precompilata online",
+    "e-Urząd Skarbowy": "ufficio delle imposte online",
+    "mObywatel": "",
+    "mDowód": "carta d'identità digitale",
+    "mStłuczka": "constatazione amichevole digitale",
+    "Bezpiecznie w sieci": "servizio di sicurezza online",
+    "wGotowości": "formazione volontaria alla difesa",
+    "CERT Polska": "squadra nazionale di cybersicurezza",
+    "System Dokumenty Zastrzeżone (ZBP)": "registro bancario dei documenti bloccati",
+    "Zastrzegam.pl": "servizio di blocco delle carte bancarie",
+    "MSZ": "ministero degli Esteri",
+    "MON": "ministero della Difesa",
+    "RCB": "centro governativo per la sicurezza",
+    "UKE": "autorità per le telecomunicazioni",
+    "PKW": "commissione elettorale nazionale",
+    "IMGW": "servizio meteorologico nazionale",
+    "GIOŚ": "ispettorato per l'ambiente",
+    "PZU / Warta / Allianz / PKP / Poczta Polska / BLIK / gov.pl": "",
+    "ZUS ZCNA, EMP, PIT-37, PCC-3, NIP, REGON, PKD, VIN": "nomi di moduli e codici, non tradotti"
+  },
+  "terminy": {
+    "PESEL": "numero identificativo",
+    "dowód osobisty": "carta d'identità",
+    "e-dowód": "carta d'identità elettronica",
+    "prawo jazdy": "patente di guida",
+    "wtórnik prawa jazdy": "duplicato della patente di guida",
+    "paszport": "passaporto",
+    "Karta Dużej Rodziny (KDR)": "Carta Famiglia Numerosa",
+    "800+": "assegno 800+ per i figli",
+    "OC": "RC auto",
+    "Urząd Skarbowy": "ufficio delle imposte",
+    "urząd gminy / urząd miasta": "comune",
+    "starostwo / starosta": "ufficio del distretto / capo del distretto",
+    "wydział komunikacji": "ufficio motorizzazione",
+    "urząd stanu cywilnego (USC)": "ufficio di stato civile",
+    "urząd wojewódzki": "ufficio del voivodato",
+    "księga wieczysta (KW)": "registro immobiliare",
+    "punkty karne": "punti di penalità",
+    "mandat": "multa",
+    "znak (mObywatela)": "codice mObywatel",
+    "Potwierdź swoje dane": "Conferma i tuoi dati",
+    "wizyta na odciski palców": "visita per le impronte digitali"
+  },
+  "trzy": {
+    "zastrzec dokument w bankach": {
+      "bezokolicznik": "Bloccare il documento presso le banche",
+      "przycisk": "Blocca nelle banche",
+      "rzeczownik": "Blocco del documento presso le banche",
+      "stan": "Bloccato presso le banche",
+      "rdzen": [
+        "blocc",
+        "banche"
+      ]
+    },
+    "zablokować dowód (blokada)": {
+      "bezokolicznik": "Sospendere la carta d'identità",
+      "przycisk": "Sospendi la carta",
+      "rzeczownik": "Sospensione della carta d'identità",
+      "stan": "Carta sospesa per 14 giorni",
+      "rdzen": [
+        "sosp"
+      ]
+    },
+    "unieważnić (unieważnienie)": {
+      "bezokolicznik": "Annullare la carta d'identità",
+      "przycisk": "Annulla la carta",
+      "rzeczownik": "Annullamento della carta d'identità",
+      "stan": "Carta annullata definitivamente",
+      "rdzen": [
+        "annull"
+      ]
+    },
+    "zastrzec PESEL": {
+      "bezokolicznik": "Bloccare il numero identificativo",
+      "przycisk": "Blocca il numero",
+      "rzeczownik": "Blocco del numero identificativo",
+      "stan": "Numero identificativo bloccato",
+      "rdzen": [
+        "blocc",
+        "numero"
+      ]
+    }
+  }
+}

@@ -1,0 +1,97 @@
+{
+  "forma": "ty (tykanie, napr. 'Potvrď svoje údaje')",
+  "nazwy": {
+    "ZUS": "poľská sociálna poisťovňa",
+    "eZUS / PUE ZUS": "online účet sociálnej poisťovne",
+    "NFZ": "národný zdravotný fond",
+    "IKP (Internetowe Konto Pacjenta)": "online účet pacienta",
+    "UFG": "garančný fond poistenia vozidiel",
+    "CEPiK": "register vozidiel a vodičov",
+    "CEIDG": "register živnostníkov",
+    "KRS": "súdny register firiem",
+    "ePUAP": "štátna platforma online formulárov",
+    "e-Doręczenia": "úradná elektronická odporúčaná pošta",
+    "Profil Zaufany": "bezplatná štátna online identita",
+    "podpis zaufany": "bezplatný štátny elektronický podpis",
+    "Twój e-PIT": "predvyplnené online daňové priznanie",
+    "e-Urząd Skarbowy": "online daňový úrad",
+    "mObywatel": "",
+    "mDowód": "digitálny občiansky preukaz v mObywatel",
+    "mStłuczka": "digitálny záznam o nehode",
+    "Bezpiecznie w sieci": "služba pre bezpečnosť online",
+    "wGotowości": "dobrovoľný obranný výcvik",
+    "CERT Polska": "národný tím pre kybernetické incidenty",
+    "System Dokumenty Zastrzeżone (ZBP)": "bankový register blokovaných dokladov",
+    "Zastrzegam.pl": "služba bánk na blokovanie kariet",
+    "MSZ": "ministerstvo zahraničných vecí",
+    "MON": "ministerstvo obrany",
+    "RCB": "vládne centrum pre bezpečnosť",
+    "UKE": "regulátor elektronických komunikácií",
+    "PKW": "štátna volebná komisia",
+    "IMGW": "národná meteorologická služba",
+    "GIOŚ": "hlavná inšpekcia životného prostredia",
+    "PZU / Warta / Allianz / PKP / Poczta Polska / BLIK / gov.pl": "",
+    "ZUS ZCNA, EMP, PIT-37, PCC-3, NIP, REGON, PKD, VIN": "názvy formulárov a kódov"
+  },
+  "terminy": {
+    "PESEL": "identifikačné číslo",
+    "dowód osobisty": "občiansky preukaz",
+    "e-dowód": "elektronický občiansky preukaz",
+    "prawo jazdy": "vodičský preukaz",
+    "wtórnik prawa jazdy": "duplikát vodičského preukazu",
+    "paszport": "pas",
+    "Karta Dużej Rodziny (KDR)": "Karta veľkej rodiny",
+    "800+": "príspevok 800+",
+    "OC": "PZP",
+    "Urząd Skarbowy": "daňový úrad",
+    "urząd gminy / urząd miasta": "obecný úrad / mestský úrad",
+    "starostwo / starosta": "okresný úrad / starosta okresu",
+    "wydział komunikacji": "odbor dopravy",
+    "urząd stanu cywilnego (USC)": "matričný úrad",
+    "urząd wojewódzki": "vojvodský úrad",
+    "księga wieczysta (KW)": "list vlastníctva (KW)",
+    "punkty karne": "trestné body",
+    "mandat": "pokuta",
+    "znak (mObywatela)": "znak",
+    "Potwierdź swoje dane": "Potvrď svoje údaje",
+    "wizyta na odciski palców": "návšteva úradu kvôli odtlačkom prstov"
+  },
+  "trzy": {
+    "zastrzec dokument w bankach": {
+      "bezokolicznik": "zablokovať doklad v bankách",
+      "przycisk": "Zablokovať v bankách",
+      "rzeczownik": "zablokovanie dokladu v bankách",
+      "stan": "doklad zablokovaný v bankách",
+      "rdzen": [
+        "blok"
+      ]
+    },
+    "zablokować dowód (blokada)": {
+      "bezokolicznik": "dočasne pozastaviť občiansky preukaz",
+      "przycisk": "Pozastaviť občiansky preukaz",
+      "rzeczownik": "dočasné pozastavenie občianskeho preukazu",
+      "stan": "občiansky preukaz pozastavený",
+      "rdzen": [
+        "pozast"
+      ]
+    },
+    "unieważnić (unieważnienie)": {
+      "bezokolicznik": "zneplatniť občiansky preukaz",
+      "przycisk": "Zneplatniť občiansky preukaz",
+      "rzeczownik": "zneplatnenie občianskeho preukazu",
+      "stan": "občiansky preukaz zneplatnený",
+      "rdzen": [
+        "zneplat"
+      ]
+    },
+    "zastrzec PESEL": {
+      "bezokolicznik": "zablokovať identifikačné číslo",
+      "przycisk": "Zablokovať identifikačné číslo",
+      "rzeczownik": "zablokovanie identifikačného čísla",
+      "stan": "identifikačné číslo zablokované",
+      "rdzen": [
+        "blok"
+      ]
+    }
+  }
+}

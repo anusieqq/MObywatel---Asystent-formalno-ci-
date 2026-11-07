@@ -1,0 +1,97 @@
+{
+  "forma": "te (tegezés, pl. 'Erősítsd meg az adataidat')",
+  "nazwy": {
+    "ZUS": "lengyel társadalombiztosítási intézet",
+    "eZUS / PUE ZUS": "a ZUS online fiókja",
+    "NFZ": "nemzeti egészségbiztosítási alap",
+    "IKP (Internetowe Konto Pacjenta)": "online betegfiók",
+    "UFG": "biztosítási garanciaalap",
+    "CEPiK": "jármű- és vezetői nyilvántartás",
+    "CEIDG": "egyéni vállalkozók nyilvántartása",
+    "KRS": "országos cégnyilvántartás",
+    "ePUAP": "állami online űrlapplatform",
+    "e-Doręczenia": "hivatalos elektronikus ajánlott levél",
+    "Profil Zaufany": "ingyenes állami azonosítás",
+    "podpis zaufany": "ingyenes állami e-aláírás",
+    "Twój e-PIT": "előre kitöltött online adóbevallás",
+    "e-Urząd Skarbowy": "online adóhivatal",
+    "mObywatel": "",
+    "mDowód": "digitális személyi az mObywatelben",
+    "mStłuczka": "digitális baleseti jegyzőkönyv",
+    "Bezpiecznie w sieci": "online biztonsági szolgáltatás",
+    "wGotowości": "önkéntes védelmi kiképzés",
+    "CERT Polska": "nemzeti kibervédelmi csapat",
+    "System Dokumenty Zastrzeżone (ZBP)": "bankok letiltott okmányainak nyilvántartása",
+    "Zastrzegam.pl": "bankok kártyatiltó szolgáltatása",
+    "MSZ": "külügyminisztérium",
+    "MON": "honvédelmi minisztérium",
+    "RCB": "kormányzati biztonsági központ",
+    "UKE": "elektronikus hírközlési hatóság",
+    "PKW": "országos választási bizottság",
+    "IMGW": "országos meteorológiai szolgálat",
+    "GIOŚ": "környezetvédelmi főfelügyelőség",
+    "PZU / Warta / Allianz / PKP / Poczta Polska / BLIK / gov.pl": "",
+    "ZUS ZCNA, EMP, PIT-37, PCC-3, NIP, REGON, PKD, VIN": "űrlapok és kódok nevei"
+  },
+  "terminy": {
+    "PESEL": "személyi azonosító",
+    "dowód osobisty": "személyi igazolvány",
+    "e-dowód": "e-személyi",
+    "prawo jazdy": "jogosítvány",
+    "wtórnik prawa jazdy": "jogosítvány másodpéldánya",
+    "paszport": "útlevél",
+    "Karta Dużej Rodziny (KDR)": "Nagycsaládos Kártya",
+    "800+": "800+ gyermektámogatás",
+    "OC": "kötelező biztosítás",
+    "Urząd Skarbowy": "adóhivatal",
+    "urząd gminy / urząd miasta": "önkormányzat / polgármesteri hivatal",
+    "starostwo / starosta": "járási hivatal / járási vezető",
+    "wydział komunikacji": "okmányiroda",
+    "urząd stanu cywilnego (USC)": "anyakönyvi hivatal",
+    "urząd wojewódzki": "vajdasági hivatal",
+    "księga wieczysta (KW)": "tulajdoni lap (KW)",
+    "punkty karne": "büntetőpontok",
+    "mandat": "bírság",
+    "znak (mObywatela)": "kód",
+    "Potwierdź swoje dane": "Erősítsd meg az adataidat",
+    "wizyta na odciski palców": "hivatali látogatás ujjlenyomat leadására"
+  },
+  "trzy": {
+    "zastrzec dokument w bankach": {
+      "bezokolicznik": "letiltani az okmányt a bankoknál",
+      "przycisk": "Letiltás a bankoknál",
+      "rzeczownik": "az okmány letiltása a bankoknál",
+      "stan": "letiltva a bankoknál",
+      "rdzen": [
+        "letilt"
+      ]
+    },
+    "zablokować dowód (blokada)": {
+      "bezokolicznik": "ideiglenesen felfüggeszteni a személyi igazolványt",
+      "przycisk": "Igazolvány felfüggesztése",
+      "rzeczownik": "a személyi igazolvány ideiglenes felfüggesztése",
+      "stan": "felfüggesztett személyi igazolvány",
+      "rdzen": [
+        "felfügg"
+      ]
+    },
+    "unieważnić (unieważnienie)": {
+      "bezokolicznik": "érvényteleníteni a személyi igazolványt",
+      "przycisk": "Igazolvány érvénytelenítése",
+      "rzeczownik": "a személyi igazolvány érvénytelenítése",
+      "stan": "érvénytelenített személyi igazolvány",
+      "rdzen": [
+        "érvénytelenít"
+      ]
+    },
+    "zastrzec PESEL": {
+      "bezokolicznik": "zárolni a személyi azonosítót",
+      "przycisk": "Azonosító zárolása",
+      "rzeczownik": "a személyi azonosító zárolása",
+      "stan": "zárolt személyi azonosító",
+      "rdzen": [
+        "zárol"
+      ]
+    }
+  }
+}

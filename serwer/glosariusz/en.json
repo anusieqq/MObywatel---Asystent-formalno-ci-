@@ -1,0 +1,98 @@
+{
+ "forma": "you",
+ "nazwy": {
+  "ZUS": "state social insurance institution",
+  "eZUS / PUE ZUS": "ZUS online account",
+  "NFZ": "national health insurance fund",
+  "IKP (Internetowe Konto Pacjenta)": "online patient account",
+  "UFG": "car insurance guarantee fund",
+  "CEPiK": "vehicle and driver register",
+  "CEIDG": "sole-trader business register",
+  "KRS": "national company court register",
+  "ePUAP": "government online-forms platform",
+  "e-Doręczenia": "official electronic registered mail",
+  "Profil Zaufany": "free government login identity",
+  "podpis zaufany": "free government e-signature",
+  "Twój e-PIT": "pre-filled online tax return",
+  "e-Urząd Skarbowy": "online tax office",
+  "mObywatel": "",
+  "mDowód": "digital ID card in mObywatel",
+  "mStłuczka": "digital accident report",
+  "Bezpiecznie w sieci": "online-safety service",
+  "wGotowości": "voluntary defence training",
+  "CERT Polska": "national cyber-incident response team",
+  "System Dokumenty Zastrzeżone (ZBP)": "banks' document alert register",
+  "Zastrzegam.pl": "bank card blocking service",
+  "MSZ": "Ministry of Foreign Affairs",
+  "MON": "Ministry of Defence",
+  "RCB": "government security centre",
+  "UKE": "telecom regulator",
+  "PKW": "national electoral commission",
+  "IMGW": "national weather service",
+  "GIOŚ": "environmental protection inspectorate",
+  "PZU / Warta / Allianz / PKP / Poczta Polska / BLIK / gov.pl": "",
+  "ZUS ZCNA, EMP, PIT-37, PCC-3, NIP, REGON, PKD, VIN": "form and code names, not translated"
+ },
+ "terminy": {
+  "PESEL": "ID number",
+  "dowód osobisty": "ID card",
+  "e-dowód": "e-ID card",
+  "prawo jazdy": "driving licence",
+  "wtórnik prawa jazdy": "duplicate driving licence",
+  "paszport": "passport",
+  "Karta Dużej Rodziny (KDR)": "Large Family Card",
+  "800+": "800+ child benefit",
+  "OC": "liability insurance",
+  "Urząd Skarbowy": "tax office",
+  "urząd gminy / urząd miasta": "municipal office",
+  "starostwo / starosta": "district office / district head",
+  "wydział komunikacji": "vehicle registration office",
+  "urząd stanu cywilnego (USC)": "civil registry office",
+  "urząd wojewódzki": "provincial office",
+  "księga wieczysta (KW)": "land and mortgage register",
+  "punkty karne": "penalty points",
+  "mandat": "fine",
+  "znak (mObywatela)": "sign",
+  "Potwierdź swoje dane": "Confirm your details",
+  "wizyta na odciski palców": "fingerprint appointment"
+ },
+ "trzy": {
+  "zastrzec dokument w bankach": {
+   "przycisk": "Block at banks",
+   "bezokolicznik": "block the document at banks",
+   "rzeczownik": "block at banks",
+   "stan": "blocked at banks",
+   "rdzen": [
+    "block",
+    "bank"
+   ]
+  },
+  "zablokować dowód (blokada)": {
+   "bezokolicznik": "suspend the ID card for 14 days",
+   "przycisk": "Suspend ID card",
+   "rzeczownik": "ID card suspension",
+   "stan": "ID card suspended",
+   "rdzen": [
+    "suspen"
+   ]
+  },
+  "unieważnić (unieważnienie)": {
+   "przycisk": "Invalidate ID card",
+   "bezokolicznik": "invalidate the ID card permanently",
+   "rzeczownik": "invalidation of the ID card",
+   "stan": "ID card invalidated",
+   "rdzen": [
+    "invalid"
+   ]
+  },
+  "zastrzec PESEL": {
+   "bezokolicznik": "freeze the ID number",
+   "przycisk": "Freeze ID number",
+   "rzeczownik": "ID number freeze",
+   "stan": "ID number freeze active",
+   "rdzen": [
+    "freez"
+   ]
+  }
+ }
+}

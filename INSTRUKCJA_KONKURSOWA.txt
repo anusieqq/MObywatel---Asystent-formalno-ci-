@@ -1,0 +1,157 @@
+OBYWATEL AI — INSTRUKCJA URUCHOMIENIA I MATERIAŁY DO ZGŁOSZENIA
+================================================================
+
+1. OPIS PROJEKTU DO FORMULARZA KONKURSOWEGO
+
+Obywatel AI to klikalny prototyp asystenta, który porządkuje formalności w
+czytelne kroki. Użytkownik może przygotować plan dla wybranej sytuacji,
+monitorować jego postęp, zadać pytanie o sprawę oraz skorzystać z tłumacza
+pism urzędowych. W przykładowym trybie system jasno oznacza treści
+demonstracyjne; po skonfigurowaniu API może analizować dokumenty i tworzyć
+plany na podstawie oficjalnych kart usług.
+
+Prototyp nie jest usługą administracji publicznej, nie jest oficjalną
+aplikacją mObywatel i nie łączy się z rejestrami państwowymi. Przykładowe
+dane i pismo demonstracyjne są fikcyjne.
+
+
+2. LINK DO KLIKALNEGO PROTOTYPU
+
+Adres lokalny do testów: http://127.0.0.1:8790/aplikacja
+
+Adres lokalny działa wyłącznie na komputerze, na którym uruchomiono serwer.
+Przed wysłaniem zgłoszenia wstaw tutaj publiczny adres HTTPS uzyskany po
+wdrożeniu aplikacji:
+
+Link do prototypu: [WSTAW PUBLICZNY ADRES HTTPS]
+
+Projekt zawiera plik render.yaml przygotowujący wdrożenie kontenerowe na
+Render. Po umieszczeniu projektu w repozytorium Git można utworzyć usługę
+Web Service z repozytorium; Render odczyta konfigurację z render.yaml.
+Wariant konkursowy nie wymaga logowania i nie ma skonfigurowanego klucza AI,
+dzięki czemu można przejść przykładowe scenariusze demonstracyjne bez
+udostępniania klucza API. Publiczny serwer demonstracyjny nie powinien
+otrzymywać prawdziwych pism ani danych osobowych.
+
+
+3. DODATKOWY LINK — POLSKIE MODELE I TECHNOLOGIE
+
+Model językowy: Bielik 11B v3 Instruct, model rozwijany przez SpeakLeash:
+https://huggingface.co/speakleash/Bielik-11B-v3.0-Instruct
+
+API do testowania modelu: Fabryka AI:
+https://fabryka.ai/platform
+
+W aplikacji przygotowano integrację zgodną z API Fabryka AI. Klucz jest
+ustawiany wyłącznie po stronie serwera w lokalnym pliku .env i nie trafia do
+kodu przeglądarki. Jeśli klucz nie jest skonfigurowany, ekran pisma
+demonstracyjnego i odpowiedzi przykładowe są jawnie oznaczone jako
+demonstracyjne; nie są przedstawiane jako wynik analizy AI.
+
+Wykorzystane technologie:
+- Python i biblioteka standardowa — serwer HTTP oraz API aplikacji;
+- HTML, CSS i JavaScript — interfejs działający w przeglądarce;
+- lokalna wyszukiwarka BM25 — dopasowanie spraw do kopii oficjalnych kart
+  usług przechowywanych w katalogu serwer/wiedza/;
+- Bielik przez Fabryka AI — opcjonalna analiza tekstu i planów po ustawieniu
+  klucza API;
+- PyMuPDF, Pillow i pytesseract — opcjonalny odczyt PDF-ów oraz OCR zdjęć;
+- IndexedDB i localStorage — lokalny zapis postępu, spraw i kopii
+  analizowanych dokumentów w przeglądarce;
+- Docker — powtarzalne uruchamianie serwera i wdrożenie kontenerowe.
+
+
+4. URUCHOMIENIE NA WINDOWS
+
+Wymagany jest Python 3.9 lub nowszy. Otwórz PowerShell w katalogu głównym
+projektu, czyli obok plików Dockerfile i README.md, a następnie uruchom:
+
+    py -3 serwer\server.py
+
+Jeśli polecenie py nie jest dostępne, użyj:
+
+    python serwer\server.py
+
+Otwórz w przeglądarce:
+
+    http://127.0.0.1:8790/aplikacja
+
+Serwer zatrzymasz skrótem Ctrl+C w oknie PowerShell.
+
+Bez klucza API działają przykładowe plany wbudowanych spraw, przykładowe
+odpowiedzi do zapisanych planów oraz pismo demonstracyjne. Analiza własnego
+rzeczywistego dokumentu wymaga skonfigurowanego modelu AI. Nieudanej analizy
+nie zastępujemy przykładowym wynikiem.
+
+
+5. KONFIGURACJA BIELIKA (OPCJONALNA)
+
+1. Skopiuj .env.example do pliku .env w katalogu głównym projektu.
+2. Wstaw klucz API do DOC_AI_API_KEY.
+3. Zachowaj ustawienia DOC_AI_BASE_URL=https://fabryka.ai/v1 oraz
+   DOC_AI_MODEL=bielik-11b-v3 albo wpisz wartości dostępne na swoim koncie.
+4. Uruchom ponownie serwer.
+
+Pliku .env nie wolno dołączać do zgłoszenia, repozytorium publicznego ani
+archiwum dla jury. Jest ignorowany przez .gitignore. Nie wpisuj do prototypu
+prawdziwych danych osobowych ani dokumentów zawierających takie dane.
+
+Do odczytu plików PDF i zdjęć potrzebne są dodatkowe pakiety:
+
+    python -m pip install -r requirements-doc-ai.txt
+
+Do OCR skanów potrzebny jest również Tesseract OCR z językiem polskim.
+Konfigurację ścieżki można ustawić zmiennymi TESSERACT_CMD i
+TESSDATA_PREFIX. Zwykłe skopiowanie lub wklejenie tekstu pisma nie wymaga
+OCR.
+
+
+6. STRUKTURA NAJWAŻNIEJSZYCH PLIKÓW
+
+mockup/index.html
+  Główny dokument strony oraz punkty wejścia do sekcji aplikacji.
+
+mockup/style.css
+  Style aplikacji i komponentów Asystenta Formalności.
+
+mockup/formalnosci.js
+  Nawigacja zakładki, pytania dopasowane do sytuacji, plan i postęp spraw,
+  tłumacz pism, obsługa wielu plików, wersje demonstracyjne oraz lokalny
+  zapis danych przeglądarki.
+
+serwer/server.py
+  Serwer HTTP, endpoint analizy dokumentu i planowania, komunikacja z
+  modelem, kontrola formatów oraz odczyt jednego lub kilku plików.
+
+serwer/wiedza.py
+  Lokalna wyszukiwarka kart usług administracji publicznej.
+
+serwer/wiedza/
+  Kopia danych źródłowych Gov.pl używana przez wyszukiwarkę. Zawartość może
+  nie odzwierciedlać najnowszego stanu usług; przed działaniem należy
+  otworzyć i sprawdzić oficjalną kartę.
+
+.env.example
+  Wzór ustawień. Nie zawiera klucza.
+
+Dockerfile, docker-compose.yml
+  Konfiguracja obrazu oraz lokalnego uruchomienia przez Docker.
+
+render.yaml
+  Konfiguracja wdrożenia aplikacji demonstracyjnej na Render bez klucza AI.
+
+
+7. CO SPRAWDZIĆ PRZED WYSŁANIEM
+
+- Wstawić publiczny adres HTTPS zamiast placeholdera w sekcji 2.
+- Otworzyć link w oknie prywatnym i sprawdzić, czy nie wymaga logowania.
+- Przejść scenariusz planu, oznaczyć krok i sprawdzić pasek postępu.
+- Użyć przycisku „Wstaw pismo demonstracyjne” i przejrzeć odpowiedź.
+- Potwierdzić, że w nagłówkach wyników demonstracyjnych nie ma informacji,
+  jakoby analizę wykonało AI.
+- Nie wysyłać do publicznej wersji klucza API ani prawdziwych dokumentów.
+- Lokalnie uruchomić testy regresji poleceniem:
+
+      python -m unittest discover -s tests -v
+
+
