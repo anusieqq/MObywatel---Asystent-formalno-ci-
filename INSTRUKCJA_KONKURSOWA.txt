@@ -1,177 +1,115 @@
-OBYWATEL AI — INSTRUKCJA URUCHOMIENIA I MATERIAŁY DO ZGŁOSZENIA
-================================================================
+OBYWATEL AI — INFORMACJA DLA JURY
+================================
 
-1. OPIS PROJEKTU DO FORMULARZA KONKURSOWEGO
+1. OTWARCIE PROTOTYPU
 
-Obywatel AI to klikalny prototyp asystenta, który porządkuje formalności w
-czytelne kroki. Użytkownik może przygotować plan dla wybranej sytuacji,
-monitorować jego postęp, zadać pytanie o sprawę oraz skorzystać z tłumacza
-pism urzędowych. W przykładowym trybie system jasno oznacza treści
-demonstracyjne; po skonfigurowaniu API może analizować dokumenty i tworzyć
-plany na podstawie oficjalnych kart usług.
+Prototyp działa w przeglądarce i nie wymaga instalacji ani logowania.
 
-Prototyp nie jest usługą administracji publicznej, nie jest oficjalną
-aplikacją mObywatel i nie łączy się z rejestrami państwowymi. Przykładowe
-dane i pismo demonstracyjne są fikcyjne.
-
-
-2. LINK DO KLIKALNEGO PROTOTYPU
-
-Adres lokalny do testów: http://127.0.0.1:8790/aplikacja
-
-Adres lokalny działa wyłącznie na komputerze, na którym uruchomiono serwer.
-Publiczny prototyp konkursowy (HTTPS, bez logowania):
+Link:
 https://mobywatel-asystent-formalnosci.onrender.com/aplikacja
 
-Projekt zawiera plik render.yaml przygotowujący wdrożenie kontenerowe na
-Render. Wersja konkursowa jest dostępna publicznie i nie wymaga logowania.
+Aplikacja jest hostowana na Renderze. Jeśli bezpłatna instancja była
+nieaktywna, Render uruchomi ją automatycznie po wejściu na stronę. Pierwsze
+ładowanie po przerwie może potrwać dłużej — prosimy poczekać, aż strona się
+wyświetli. Nie trzeba ręcznie uruchamiać serwera.
 
-Hosting działa na Renderze. Konto Hobby kosztuje 0 USD miesięcznie, natomiast
-koszt obliczeń zależy od typu instancji przypisanego do usługi. Przy instancji
-Free hosting usługi kosztuje 0 USD. Darmowa instancja usypia się po 15 minutach
-bez ruchu i automatycznie uruchamia po kolejnym wejściu. Pierwsze otwarcie po
-przerwie może więc potrwać dłużej; nie trzeba ręcznie uruchamiać serwera.
-Aktualne ceny i ograniczenia: https://render.com/pricing oraz
-https://render.com/docs/free
+2. JAK SPRAWDZIĆ FUNKCJE
 
-Publiczny prototyp służy do demonstracji. Nie należy przesyłać do niego
-prawdziwych pism ani danych osobowych.
+Asystent Formalności
 
+1. Na ekranie głównym otwórz „Asystent Formalności”.
+2. Wybierz „Zaplanuj swoje formalności”.
+3. Wybierz sytuację, np. przeprowadzkę, zakup samochodu albo rozpoczęcie
+   pierwszej pracy. Odpowiedz na krótkie pytania dopasowane do tej sprawy.
+4. Przejrzyj plan, szczegóły kroków i oficjalne źródła. Zaznacz wykonane
+   zadanie, aby zobaczyć zmianę postępu.
+5. Plan trafia do „Moich spraw” dopiero po wybraniu przycisku dodania go do
+   planów.
+6. Możesz też wybrać „Inna sprawa” i opisać potrzebną formalność urzędową.
 
-3. DODATKOWY LINK — POLSKIE MODELE I TECHNOLOGIE
+Wyjaśnianie pism
 
-Model językowy: Bielik 11B v3 Instruct, model rozwijany przez SpeakLeash:
-https://huggingface.co/speakleash/Bielik-11B-v3.0-Instruct
+1. W Asystencie otwórz „Wyjaśnij pismo urzędowe”.
+2. Wybierz „Wstaw pismo demonstracyjne”, aby zobaczyć przykładowy scenariusz
+   bez dodawania własnego pliku. Można też dodać PDF lub zdjęcie albo wkleić
+   treść.
+3. Sprawdź podsumowanie, wykryte czynności i terminy. Możesz wyjaśnić
+   wskazany fragment, zadać pytanie o pismo i zaproponować dodanie czynności
+   do sprawy.
+4. Dodane pisma można ponownie otworzyć w „Moich sprawach”.
 
-API do korzystania z modelu: Fabryka AI:
+W „Moich sprawach” można przeglądać plany, zadania i analizowane pisma,
+śledzić postęp oraz usuwać zapisane pozycje. Dane prototypu są przechowywane
+lokalnie w przeglądarce i nie wymagają konta użytkownika.
+
+3. MODEL AI I TRYB DEMONSTRACYJNY
+
+Do integracji z polskim modelem Bielik 11B v3 wykorzystano zgodne z API
+OpenAI API platformy Fabryka AI:
 https://fabryka.ai/platform
 
-Nie wykupiłam płatnego dostępu do Bielika ani płatnego pakietu API. Korzystam
-z bezpłatnego limitu API dostępnego na koncie Fabryka AI. Po wykorzystaniu
-limitu lub gdy dostawca AI jest chwilowo niedostępny, aplikacja przechodzi w
-tryb demonstracyjny. W planach formalności pokazuje wtedy oznaczony szkic
-oparty na lokalnych kopiach oficjalnych kart usług. Przy analizie pism
-wyświetla fikcyjny przykład z wyraźną informacją, że nie jest to analiza
-przesłanego dokumentu. Odpowiedzi demonstracyjne nie są przedstawiane jako
-wynik działania AI.
+Nie wykupiono płatnego dostępu do Bielika. Integracja korzysta z limitu Free
+API dostępnego na koncie Fabryka AI. Zgodnie z aktualną ofertą Free API
+obejmuje 10 generacji dziennie; licznik odnawia się o 00:00 UTC (w Polsce
+zimą o 01:00, latem o 02:00). Dostępność może zależeć także od obciążenia
+usługi. Aktualne informacje:
+https://fabryka.ai/regulamin.html
 
-Aplikacja obsługuje integrację z API Fabryka AI po stronie serwera. Klucz
-API nie trafia do kodu przeglądarki ani repozytorium. W środowisku Render
-ustawia się go jako tajną zmienną DOC_AI_API_KEY; adres API i model to
-DOC_AI_BASE_URL=https://fabryka.ai/v1 oraz DOC_AI_MODEL=bielik-11b-v3.
+Po wyczerpaniu limitu lub przy niedostępności dostawcy aplikacja przechodzi
+na odpowiedzi demonstracyjne. Są one wyraźnie oznaczone. W planowaniu spraw
+jest to szkic bazujący na lokalnych kopiach oficjalnych kart usług; przy
+analizie pism przykład jest fikcyjny i nie opisuje przesłanego dokumentu.
+Taki wynik nie jest przedstawiany jako analiza wykonana przez AI. Wbudowane
+pismo demonstracyjne służy do przejścia całej ścieżki bez wykorzystania
+własnego dokumentu.
 
-Wykorzystane technologie:
-- Python i biblioteka standardowa — serwer HTTP oraz API aplikacji;
-- HTML, CSS i JavaScript — interfejs działający w przeglądarce;
-- lokalna wyszukiwarka BM25 — dopasowanie spraw do kopii oficjalnych kart
-  usług przechowywanych w katalogu serwer/wiedza/;
-- Bielik przez Fabryka AI — opcjonalna analiza tekstu i planów po ustawieniu
-  klucza API;
-- PyMuPDF, Pillow i pytesseract — opcjonalny odczyt PDF-ów oraz OCR zdjęć;
-- IndexedDB i localStorage — lokalny zapis postępu, spraw i kopii
-  analizowanych dokumentów w przeglądarce;
-- Docker — powtarzalne uruchamianie serwera i wdrożenie kontenerowe.
+Publiczny prototyp jest przeznaczony do demonstracji. Prosimy nie dodawać
+prawdziwych pism ani danych osobowych. Informacje z planu należy sprawdzić
+w podlinkowanym źródle urzędowym.
 
+4. TECHNOLOGIE I STRUKTURA PROJEKTU
 
-4. URUCHOMIENIE NA WINDOWS
+- Python — serwer HTTP, API aplikacji oraz komunikacja z modelem.
+- HTML, CSS i JavaScript — interfejs aplikacji w przeglądarce.
+- Bielik 11B v3 przez Fabryka AI — opcjonalne generowanie planów i analiza
+  treści, zależnie od dostępności limitu API.
+- Lokalna wyszukiwarka BM25 i kopie kart usług Gov.pl — wyszukiwanie
+  oficjalnych źródeł do planów.
+- PyMuPDF, Pillow, pytesseract i Tesseract OCR — odczyt PDF-ów oraz zdjęć.
+- localStorage i IndexedDB — zapis postępu, spraw i źródeł dokumentów
+  w przeglądarce.
+- Docker i Render — konteneryzacja oraz publiczne wdrożenie.
 
-Wymagany jest Python 3.9 lub nowszy. Otwórz PowerShell w katalogu głównym
-projektu, czyli obok plików Dockerfile i README.md, a następnie uruchom:
-
-    py -3 serwer\server.py
-
-Jeśli polecenie py nie jest dostępne, użyj:
-
-    python serwer\server.py
-
-Otwórz w przeglądarce:
-
-    http://127.0.0.1:8790/aplikacja
-
-Serwer zatrzymasz skrótem Ctrl+C w oknie PowerShell.
-
-Bez klucza API działają scenariusze demonstracyjne. Gdy lokalnie skonfigurujesz
-klucz, aplikacja może wysyłać tekst do modelu. Jeśli limit API się wyczerpie
-lub usługa AI będzie niedostępna, zobaczysz jawnie oznaczoną odpowiedź
-demonstracyjną. Przy plikach, których nie da się odczytać (np. uszkodzonych
-lub w nieobsługiwanym formacie), aplikacja nadal pokaże komunikat o błędzie
-odczytu zamiast udawać analizę.
-
-
-5. KONFIGURACJA BIELIKA (OPCJONALNA)
-
-1. Skopiuj .env.example do pliku .env w katalogu głównym projektu.
-2. Wstaw klucz API do DOC_AI_API_KEY.
-3. Zachowaj ustawienia DOC_AI_BASE_URL=https://fabryka.ai/v1 oraz
-   DOC_AI_MODEL=bielik-11b-v3 albo wpisz wartości dostępne na swoim koncie.
-4. Uruchom ponownie serwer.
-
-Na Renderze nie przesyłaj całego pliku .env. W panelu usługi otwórz
-Environment i ustaw osobno DOC_AI_API_KEY, DOC_AI_BASE_URL i DOC_AI_MODEL.
-Po zapisaniu wybierz Save and deploy (lub Save, rebuild, and deploy), aby
-serwer uruchomił się z nowymi ustawieniami. Sekret należy zachować poza
-repozytorium i materiałami konkursowymi.
-
-Pliku .env nie wolno dołączać do zgłoszenia, repozytorium publicznego ani
-archiwum dla jury. Jest ignorowany przez .gitignore. Nie wpisuj do prototypu
-prawdziwych danych osobowych ani dokumentów zawierających takie dane.
-
-Do odczytu plików PDF i zdjęć potrzebne są dodatkowe pakiety:
-
-    python -m pip install -r requirements-doc-ai.txt
-
-Do OCR skanów potrzebny jest również Tesseract OCR z językiem polskim.
-Konfigurację ścieżki można ustawić zmiennymi TESSERACT_CMD i
-TESSDATA_PREFIX. Zwykłe skopiowanie lub wklejenie tekstu pisma nie wymaga
-OCR.
-
-
-6. STRUKTURA NAJWAŻNIEJSZYCH PLIKÓW
+Najważniejsze pliki:
 
 mockup/index.html
-  Główny dokument strony oraz punkty wejścia do sekcji aplikacji.
+  Główna strona prototypu.
 
 mockup/style.css
-  Style aplikacji i komponentów Asystenta Formalności.
+  Style i układ interfejsu.
 
 mockup/formalnosci.js
-  Nawigacja zakładki, pytania dopasowane do sytuacji, plan i postęp spraw,
-  tłumacz pism, obsługa wielu plików, wersje demonstracyjne oraz lokalny
-  zapis danych przeglądarki.
+  Nawigacja Asystenta Formalności, pytania, plany, postęp spraw, tłumacz
+  pism, tryb demonstracyjny i zapis w przeglądarce.
 
 serwer/server.py
-  Serwer HTTP, endpoint analizy dokumentu i planowania, komunikacja z
-  modelem, kontrola formatów oraz odczyt jednego lub kilku plików.
+  Serwer i endpointy API, integracja z modelem, odczyt dokumentów oraz
+  obsługa odpowiedzi demonstracyjnych.
 
-serwer/wiedza.py
-  Lokalna wyszukiwarka kart usług administracji publicznej.
+serwer/wiedza.py oraz serwer/wiedza/
+  Wyszukiwarka i lokalne kopie materiałów źródłowych usług publicznych.
 
-serwer/wiedza/
-  Kopia danych źródłowych Gov.pl używana przez wyszukiwarkę. Zawartość może
-  nie odzwierciedlać najnowszego stanu usług; przed działaniem należy
-  otworzyć i sprawdzić oficjalną kartę.
+Dockerfile, requirements-doc-ai.txt, render.yaml
+  Konfiguracja kontenera, zależności do analizy dokumentów i wdrożenie
+  na Renderze.
 
-.env.example
-  Wzór ustawień. Nie zawiera klucza.
+tests/test_formalnosci.py
+  Testy regresji kluczowych zachowań Asystenta Formalności.
 
-Dockerfile, docker-compose.yml
-  Konfiguracja obrazu oraz lokalnego uruchomienia przez Docker.
+5. CHARAKTER PROTOTYPU
 
-render.yaml
-  Konfiguracja wdrożenia aplikacji demonstracyjnej na Render bez klucza AI.
-
-
-7. CO SPRAWDZIĆ PRZED WYSŁANIEM
-
-- Wstawić publiczny adres HTTPS zamiast placeholdera w sekcji 2.
-- Otworzyć link w oknie prywatnym i sprawdzić, czy nie wymaga logowania.
-- Przejść scenariusz planu, oznaczyć krok i sprawdzić pasek postępu.
-- Użyć przycisku „Wstaw pismo demonstracyjne” i przejrzeć odpowiedź.
-- Potwierdzić, że w nagłówkach wyników demonstracyjnych nie ma informacji,
-  jakoby analizę wykonało AI.
-- Nie wysyłać do publicznej wersji klucza API ani prawdziwych dokumentów.
-- Lokalnie uruchomić testy regresji poleceniem:
-
-      python -m unittest discover -s tests -v
-
-
+Obywatel AI jest niezależnym prototypem konkursowym. Nie jest oficjalną
+usługą administracji publicznej ani aplikacją mObywatel i nie łączy się
+z rejestrami państwowymi. Nie podejmuje decyzji administracyjnych. Lokalna
+baza kart usług może nie odzwierciedlać najnowszych zmian, dlatego przed
+wykonaniem formalności należy sprawdzić podlinkowane źródło urzędowe.
