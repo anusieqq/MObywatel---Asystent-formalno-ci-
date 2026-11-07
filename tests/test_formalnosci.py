@@ -3,6 +3,7 @@ import base64
 import json
 import os
 import sys
+import urllib.error
 import unittest
 from unittest.mock import patch
 
@@ -43,6 +44,25 @@ class FormalnosciTests(unittest.TestCase):
         self.assertTrue(result['demo'])
         self.assertTrue(result['steps'])
         self.assertTrue(result['sources'])
+
+    def test_case_plan_falls_back_when_provider_quota_is_exhausted(self):
+        query = 'Chcę uzyskać odpis aktu urodzenia dziecka'
+        quota_error = urllib.error.HTTPError('https://fabryka.ai/v1/chat/completions', 429, 'limit', {}, None)
+        with patch.dict(os.environ, {
+            'DOC_AI_API_KEY': 'test-only', 'DOC_AI_BASE_URL': 'https://fabryka.ai/v1', 'DOC_AI_MODEL': 'bielik-test'
+        }), patch.object(server.urllib.request, 'urlopen', side_effect=quota_error):
+            result = server.analizuj_pismo({'mode': 'case_plan', 'text': query})
+        self.assertTrue(result['demo'])
+        self.assertTrue(result['steps'])
+        self.assertIn('demonstracyjny', result['note'])
+
+    def test_document_analysis_reports_quota_as_ai_unavailable(self):
+        quota_error = urllib.error.HTTPError('https://fabryka.ai/v1/chat/completions', 429, 'limit', {}, None)
+        with patch.dict(os.environ, {
+            'DOC_AI_API_KEY': 'test-only', 'DOC_AI_BASE_URL': 'https://fabryka.ai/v1', 'DOC_AI_MODEL': 'bielik-test'
+        }), patch.object(server.urllib.request, 'urlopen', side_effect=quota_error):
+            with self.assertRaisesRegex(RuntimeError, 'Limit lub dostęp do modelu'):
+                server.analizuj_pismo({'mode': 'analysis', 'text': 'Treść pisma urzędowego do analizy.'})
 
     @unittest.skipUnless(__import__('importlib').util.find_spec('pymupdf'), 'PyMuPDF is optional')
     def test_several_pdfs_are_sent_as_one_analysis(self):

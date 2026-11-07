@@ -9,3 +9,7 @@ services:
         value: 0.0.0.0
       - key: PORT
         value: 10000
+      - key: DOC_AI_BASE_URL
+        value: https://fabryka.ai/v1
+      - key: DOC_AI_MODEL
+        value: bielik-11b-v3

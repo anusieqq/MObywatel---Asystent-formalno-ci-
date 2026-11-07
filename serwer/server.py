@@ -165,9 +165,9 @@ def analizuj_pismo(req):
         if zablokowane() or not key:
             return _demo_plan_from_sources(text, plan_sources, 'brak dostępnego modelu')
     else:
-        if zablokowane(): raise ValueError('Analiza modelu jest obecnie wyłączona.')
+        if zablokowane(): raise PermissionError('Analiza AI jest obecnie wyłączona.')
         key = os.environ.get('DOC_AI_API_KEY') or k('openai')
-        if not key: raise PermissionError('Brak klucza DOC_AI_API_KEY (lub OPENAI_API_KEY). Dodaj go w konfiguracji serwera, aby uruchomić analizę AI.')
+        if not key: raise PermissionError('Nie skonfigurowano klucza AI. Możesz skorzystać z odpowiedzi demonstracyjnej.')
     base_url = (os.environ.get('DOC_AI_BASE_URL') or 'https://api.openai.com/v1').rstrip('/')
     is_fabryka = 'fabryka.ai' in base_url
     model = os.environ.get('DOC_AI_MODEL') or ('bielik-11b-v3' if is_fabryka else agent.OPENAI_MODEL)
@@ -249,9 +249,18 @@ def analizuj_pismo(req):
     api = urllib.request.Request(base_url + ('/chat/completions' if is_fabryka else '/responses'), data=json.dumps(body).encode('utf-8'), headers=headers)
     try:
         with urllib.request.urlopen(api, timeout=120) as response: out = json.loads(response.read())
+    except urllib.error.HTTPError as e:
+        # Dostawca może zwrócić 429 po wyczerpaniu limitu albo 402 przy braku środków.
+        # Nie logujemy treści błędu, bo dostawca może umieścić w niej dane wrażliwe.
+        if e.code in (402, 429, 503):
+            reason = 'limit lub chwilowa niedostępność dostawcy (HTTP %s)' % e.code
+            if mode == 'case_plan': return _demo_plan_from_sources(text, plan_sources, reason)
+            raise RuntimeError('Limit lub dostęp do modelu AI jest chwilowo niedostępny. Pokazujemy teraz odpowiedź demonstracyjną.') from e
+        if mode == 'case_plan': return _demo_plan_from_sources(text, plan_sources, 'błąd dostawcy (HTTP %s)' % e.code)
+        raise RuntimeError('Dostawca AI zwrócił błąd. Spróbuj ponownie później albo użyj odpowiedzi demonstracyjnej.') from e
     except Exception as e:
-        if mode == 'case_plan': return _demo_plan_from_sources(text, plan_sources, str(e)[:180])
-        raise RuntimeError('Nie udało się połączyć z modelem AI. Sprawdź konfigurację serwera i spróbuj ponownie.') from e
+        if mode == 'case_plan': return _demo_plan_from_sources(text, plan_sources, 'brak połączenia z dostawcą AI')
+        raise RuntimeError('Nie udało się połączyć z modelem AI. Możesz skorzystać z odpowiedzi demonstracyjnej.') from e
     if is_fabryka:
         answer = out.get('choices', [{}])[0].get('message', {}).get('content', '')
         if isinstance(answer, list): answer = ''.join(p.get('text', '') for p in answer if isinstance(p, dict))
@@ -430,9 +439,9 @@ class H(SimpleHTTPRequestHandler):
                 try: req = json.loads(self.body() or b'{}')
                 except Exception: return self.js(dict(error='Nie udało się odczytać żądania.'), 400)
                 try: return self.js(dict(result=analizuj_pismo(req)))
-                except PermissionError as e: return self.js(dict(error=str(e)), 503)
+                except PermissionError as e: return self.js(dict(error=str(e), code='AI_UNAVAILABLE'), 503)
                 except ValueError as e: return self.js(dict(error=str(e)), 400)
-                except RuntimeError as e: return self.js(dict(error=str(e)), 502)
+                except RuntimeError as e: return self.js(dict(error=str(e), code='AI_UNAVAILABLE'), 502)
             if p == '/api/agent':
                 req = json.loads(self.body() or b'{}')
                 if zablokowane():
