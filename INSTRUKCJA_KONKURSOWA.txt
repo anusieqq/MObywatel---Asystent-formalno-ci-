@@ -24,11 +24,18 @@ Publiczny prototyp konkursowy (HTTPS, bez logowania):
 https://mobywatel-asystent-formalnosci.onrender.com/aplikacja
 
 Projekt zawiera plik render.yaml przygotowujący wdrożenie kontenerowe na
-Render. Wersja demonstracyjna jest już wdrożona z tego repozytorium.
-Nie wymaga logowania i nie ma skonfigurowanego klucza AI, dzięki czemu można
-przejść przykładowe scenariusze bez udostępniania klucza API. Publiczny
-serwer demonstracyjny nie powinien otrzymywać prawdziwych pism ani danych
-osobowych.
+Render. Wersja konkursowa jest dostępna publicznie i nie wymaga logowania.
+
+Hosting działa na Renderze. Konto Hobby kosztuje 0 USD miesięcznie, natomiast
+koszt obliczeń zależy od typu instancji przypisanego do usługi. Przy instancji
+Free hosting usługi kosztuje 0 USD. Darmowa instancja usypia się po 15 minutach
+bez ruchu i automatycznie uruchamia po kolejnym wejściu. Pierwsze otwarcie po
+przerwie może więc potrwać dłużej; nie trzeba ręcznie uruchamiać serwera.
+Aktualne ceny i ograniczenia: https://render.com/pricing oraz
+https://render.com/docs/free
+
+Publiczny prototyp służy do demonstracji. Nie należy przesyłać do niego
+prawdziwych pism ani danych osobowych.
 
 
 3. DODATKOWY LINK — POLSKIE MODELE I TECHNOLOGIE
@@ -36,14 +43,22 @@ osobowych.
 Model językowy: Bielik 11B v3 Instruct, model rozwijany przez SpeakLeash:
 https://huggingface.co/speakleash/Bielik-11B-v3.0-Instruct
 
-API do testowania modelu: Fabryka AI:
+API do korzystania z modelu: Fabryka AI:
 https://fabryka.ai/platform
 
-W aplikacji przygotowano integrację zgodną z API Fabryka AI. Klucz jest
-ustawiany wyłącznie po stronie serwera w lokalnym pliku .env i nie trafia do
-kodu przeglądarki. Jeśli klucz nie jest skonfigurowany, ekran pisma
-demonstracyjnego i odpowiedzi przykładowe są jawnie oznaczone jako
-demonstracyjne; nie są przedstawiane jako wynik analizy AI.
+Nie wykupiłam płatnego dostępu do Bielika ani płatnego pakietu API. Korzystam
+z bezpłatnego limitu API dostępnego na koncie Fabryka AI. Po wykorzystaniu
+limitu lub gdy dostawca AI jest chwilowo niedostępny, aplikacja przechodzi w
+tryb demonstracyjny. W planach formalności pokazuje wtedy oznaczony szkic
+oparty na lokalnych kopiach oficjalnych kart usług. Przy analizie pism
+wyświetla fikcyjny przykład z wyraźną informacją, że nie jest to analiza
+przesłanego dokumentu. Odpowiedzi demonstracyjne nie są przedstawiane jako
+wynik działania AI.
+
+Aplikacja obsługuje integrację z API Fabryka AI po stronie serwera. Klucz
+API nie trafia do kodu przeglądarki ani repozytorium. W środowisku Render
+ustawia się go jako tajną zmienną DOC_AI_API_KEY; adres API i model to
+DOC_AI_BASE_URL=https://fabryka.ai/v1 oraz DOC_AI_MODEL=bielik-11b-v3.
 
 Wykorzystane technologie:
 - Python i biblioteka standardowa — serwer HTTP oraz API aplikacji;
@@ -75,10 +90,12 @@ Otwórz w przeglądarce:
 
 Serwer zatrzymasz skrótem Ctrl+C w oknie PowerShell.
 
-Bez klucza API działają przykładowe plany wbudowanych spraw, przykładowe
-odpowiedzi do zapisanych planów oraz pismo demonstracyjne. Analiza własnego
-rzeczywistego dokumentu wymaga skonfigurowanego modelu AI. Nieudanej analizy
-nie zastępujemy przykładowym wynikiem.
+Bez klucza API działają scenariusze demonstracyjne. Gdy lokalnie skonfigurujesz
+klucz, aplikacja może wysyłać tekst do modelu. Jeśli limit API się wyczerpie
+lub usługa AI będzie niedostępna, zobaczysz jawnie oznaczoną odpowiedź
+demonstracyjną. Przy plikach, których nie da się odczytać (np. uszkodzonych
+lub w nieobsługiwanym formacie), aplikacja nadal pokaże komunikat o błędzie
+odczytu zamiast udawać analizę.
 
 
 5. KONFIGURACJA BIELIKA (OPCJONALNA)
@@ -88,6 +105,12 @@ nie zastępujemy przykładowym wynikiem.
 3. Zachowaj ustawienia DOC_AI_BASE_URL=https://fabryka.ai/v1 oraz
    DOC_AI_MODEL=bielik-11b-v3 albo wpisz wartości dostępne na swoim koncie.
 4. Uruchom ponownie serwer.
+
+Na Renderze nie przesyłaj całego pliku .env. W panelu usługi otwórz
+Environment i ustaw osobno DOC_AI_API_KEY, DOC_AI_BASE_URL i DOC_AI_MODEL.
+Po zapisaniu wybierz Save and deploy (lub Save, rebuild, and deploy), aby
+serwer uruchomił się z nowymi ustawieniami. Sekret należy zachować poza
+repozytorium i materiałami konkursowymi.
 
 Pliku .env nie wolno dołączać do zgłoszenia, repozytorium publicznego ani
 archiwum dla jury. Jest ignorowany przez .gitignore. Nie wpisuj do prototypu
