@@ -198,6 +198,34 @@ class FormalnosciTests(unittest.TestCase):
         self.assertTrue(result['demo'])
         self.assertIn('cytatu potwierdzonego', result['note'])
 
+    def test_custom_plan_keeps_verified_steps_and_drops_unverified_ones(self):
+        source = {'title': 'Usługa testowa', 'url': 'https://www.gov.pl/web/gov/uslugi-dla-obywatela',
+                  'institution': 'Gov.pl', 'updated': '', 'description': 'Opis źródła.',
+                  'sections': [{'title': 'Szczegóły', 'text': 'Wniosek złóż w urzędzie.'}]}
+
+        def fake_open(request, timeout):
+            return FakeResponse({'model': 'bielik-test', 'choices': [{'message': {'content': json.dumps({
+                'recognized': True, 'title': 'Plan testowy', 'about': 'Plan dla testu.',
+                'steps': [
+                    {'name': 'Złóż wniosek', 'detail': 'Złóż wniosek.', 'why': 'Wniosek.', 'docs': [],
+                     'deadline': '', 'where': '', 'url': source['url'], 'source_quote': 'Wniosek złóż w urzędzie.'},
+                    {'name': 'Zapłać opłatę', 'detail': 'Zapłać 100 zł.', 'why': 'Opłata.', 'docs': [],
+                     'deadline': 'Jutro', 'where': 'Urząd', 'url': source['url'], 'source_quote': 'Opłata wynosi 100 zł.'}
+                ]
+            })}}]})
+
+        with patch.dict(os.environ, {
+            'DOC_AI_API_KEY': 'test-only', 'DOC_AI_BASE_URL': 'https://fabryka.ai/v1', 'DOC_AI_MODEL': 'bielik-test'
+        }), patch.object(server, '_formalnosci_sources', return_value=[source]), \
+             patch.object(server, '_case_has_relevant_source', return_value=True), \
+             patch.object(server.urllib.request, 'urlopen', fake_open):
+            result = server.analizuj_pismo({'mode': 'case_plan', 'text': 'Chcę załatwić sprawę urzędową.'})
+
+        self.assertFalse(result['demo'])
+        self.assertEqual([step['name'] for step in result['steps']], ['Złóż wniosek'])
+        self.assertNotIn('Pominięto', result['note'])
+        self.assertIn('Sprawdź źródła przed działaniem', result['note'])
+
 
 if __name__ == '__main__':
     unittest.main()
