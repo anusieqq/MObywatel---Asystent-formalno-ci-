@@ -17,7 +17,8 @@ let state={cases:[],docs:[]};
 try{state={...state,...JSON.parse(localStorage.getItem('obywatel-formalnosci')||'{}')}}catch{}
 let page='home',chosen='',question=0,answers=[],filter='Wszystkie',detail=-1,docName='',custom='',demoAnalysis=false,customPlanRequest=0,draftCase=null,activeDoc=null,activeSource=null,analysisResult=null,explainIndex=-1;
 const volatileDocSources=new Map();
-const esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+const textValue=s=>typeof s==='string'?s:Array.isArray(s)?s.map(textValue).filter(Boolean).join('\n'):s&&typeof s==='object'?textValue(s.text??s.claim??s.answer??s.value??s.content??''):s==null?'':String(s);
+const esc=s=>textValue(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function save(){localStorage.setItem('obywatel-formalnosci',JSON.stringify(state))}
 const qs={
  'Przeprowadzka':[

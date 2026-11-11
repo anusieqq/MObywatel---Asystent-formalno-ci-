@@ -176,6 +176,21 @@ class FormalnosciTests(unittest.TestCase):
         self.assertEqual(result['consequences'], '')
         self.assertEqual(result['summary'], 'Sprawdź oryginał pisma i jego pouczenie; nie uzyskano potwierdzonego podsumowania.')
 
+    def test_analysis_normalizes_object_consequences_with_verified_quote(self):
+        source = 'Wniosek może zostać pozostawiony bez rozpoznania.'
+        result = server._verify_document_analysis({
+            'about': 'Informacja o wniosku.', 'about_source_quote': 'wniosku',
+            'request': 'Uzupełnij dokumenty.', 'request_source_quote': 'Uzupełnij dokumenty.',
+            'actions': [], 'deadlines': [], 'documents': [],
+            'consequences': {'text': 'Wniosek może pozostać bez rozpoznania.', 'source_quote': source},
+            'consequences_source_quote': source,
+            'summary': 'Uzupełnij dokumenty.', 'summary_source_quote': 'Uzupełnij dokumenty.',
+            'excerpts': []
+        }, source)
+
+        self.assertEqual(result['consequences'], 'Wniosek może pozostać bez rozpoznania.')
+        self.assertEqual(result['consequences_source_quote'], source)
+
     def test_custom_plan_falls_back_when_step_quote_is_not_in_source(self):
         source = {'title': 'Usługa testowa', 'url': 'https://www.gov.pl/web/gov/uslugi-dla-obywatela',
                   'institution': 'Gov.pl', 'updated': '', 'description': 'Opis źródła.',

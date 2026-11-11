@@ -135,6 +135,16 @@ def _verify_document_analysis(parsed, source_text):
     }
     for field, quote_field in field_quotes.items():
         claim = parsed.get(field)
+        if isinstance(claim, dict):
+            if not parsed.get(quote_field):
+                parsed[quote_field] = claim.get('source_quote') or claim.get('quote') or ''
+            claim = next((claim.get(key) for key in ('text', 'claim', 'answer', 'value', 'content')
+                          if isinstance(claim.get(key), str)), '')
+        elif isinstance(claim, list):
+            claim = ' '.join(item.strip() for item in claim if isinstance(item, str) and item.strip())
+        elif not isinstance(claim, str):
+            claim = ''
+        parsed[field] = claim.strip()
         quote = parsed.get(quote_field)
         if claim and not _is_verified_quote(quote, source_text):
             parsed[field] = ''
